@@ -178,6 +178,8 @@ async function insertBooks() {
 // Run the function
 insertBooks().catch(console.error);
 
+module.exports = insertBooks;
+
 /*
  * Example MongoDB queries you can try after running this script:
  *
