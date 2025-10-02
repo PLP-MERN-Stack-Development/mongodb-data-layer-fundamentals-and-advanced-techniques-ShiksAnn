@@ -7,6 +7,7 @@ insert_books.js → Seeds the database with sample book data.
 
 queries.js → Performs queries, updates, deletions, aggregations, and indexing on the data.
 
+
 🚀 Features
 
 Database Seeding (insert_books.js)
@@ -59,11 +60,13 @@ Create compound index on author + published_year
 
 Query performance analysis with explain()
 
+
 📂 Project Structure
 📦 mongodb-bookstore
  ┣ 📜 insert_books.js   # Script to seed MongoDB with sample data
  ┣ 📜 queries.js        # Script to run queries & aggregations
  ┣ 📜 README.md         # Project documentation
+
 
 🛠️ Prerequisites
 
@@ -73,6 +76,7 @@ Install MongoDB Community Edition
  or use MongoDB Atlas
 
 Start your local MongoDB server (default: mongodb://localhost:27017)
+
 
 📥 Installation
 # Clone the repository
