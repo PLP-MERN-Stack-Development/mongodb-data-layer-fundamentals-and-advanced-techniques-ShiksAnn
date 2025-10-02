@@ -1,59 +1,118 @@
-# MongoDB Fundamentals - Week 1
+📚 MongoDB Bookstore Project
 
-## Setup Instructions
+This project demonstrates how to build and interact with a MongoDB database using Node.js and the MongoDB Driver.
+It includes two main scripts:
 
-Before you begin this assignment, please make sure you have the following installed:
+insert_books.js → Seeds the database with sample book data.
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+queries.js → Performs queries, updates, deletions, aggregations, and indexing on the data.
 
-### Node.js Package Setup
+🚀 Features
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+Database Seeding (insert_books.js)
 
-```bash
-# Initialize a package.json file
-npm init -y
+Connects to MongoDB
 
-# Install the MongoDB Node.js driver
+Drops existing books collection (if it exists)
+
+Inserts a set of sample books
+
+Logs inserted documents
+
+Queries & Operations (queries.js)
+
+CRUD Operations
+
+Find books by genre
+
+Find books published after a year
+
+Find books by a specific author
+
+Update book price
+
+Delete a book
+
+Advanced Queries
+
+Find in-stock books published after 2010
+
+Projection (only title, author, price)
+
+Sorting (ascending & descending by price)
+
+Pagination (page 2, 5 books per page)
+
+Aggregation Pipelines
+
+Average price by genre
+
+Author with the most books
+
+Group books by decade
+
+Indexes
+
+Create index on title
+
+Create compound index on author + published_year
+
+Query performance analysis with explain()
+
+📂 Project Structure
+📦 mongodb-bookstore
+ ┣ 📜 insert_books.js   # Script to seed MongoDB with sample data
+ ┣ 📜 queries.js        # Script to run queries & aggregations
+ ┣ 📜 README.md         # Project documentation
+
+🛠️ Prerequisites
+
+Install Node.js
+
+Install MongoDB Community Edition
+ or use MongoDB Atlas
+
+Start your local MongoDB server (default: mongodb://localhost:27017)
+
+📥 Installation
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate to the project
+cd mongodb-bookstore
+
+# Install dependencies
 npm install mongodb
-```
 
-## Assignment Overview
+▶️ Usage
+1. Seed the Database
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+Run the insert_books.js script to populate the plp_bookstore database:
 
-## Submission
+node insert_books.js
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
 
-## Getting Started
+✅ This will insert sample books into the books collection.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+2. Run Queries
 
-## Files Included
+Execute the queries.js script to test different MongoDB operations:
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+node queries.js
 
-## Requirements
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+✅ You’ll see console output for each task: CRUD, advanced queries, aggregation, and indexes.
 
-## Resources
+📊 Example Console Output
+Connected to MongoDB server
+12 books were successfully inserted into the database
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+ Fiction Books: [ ... ]
+ Books published after 1950: [ ... ]
+ Updated Hobbit price: Success
+ Deleted Moby Dick: Success
+ Average price by genre: [ ... ]
+ Author with the most books: [ ... ]
+ Books grouped by decade: [ ... ]
+ Index created on 'title'
+ Compound index created on 'author' and 'published_year'
